@@ -1,0 +1,16 @@
+query {
+  search(query: "KylinChang", type: USER, first: 1) {
+    nodes {
+      ... on User {
+        name
+        login
+        id
+        email
+        createdAt
+        followers {
+          totalCount
+        }
+      }
+    }
+  }
+}

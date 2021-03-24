@@ -1,0 +1,25 @@
+{
+  "name": "tccii_git_quality_explorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "node-cmd": "^4.0.0",
+    "nodegit": "^0.27.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "sonarqube-scanner": "^2.8.0",
+    "uuid": "^8.3.2"
+  }
+}

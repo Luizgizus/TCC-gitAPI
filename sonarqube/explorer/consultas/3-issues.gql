@@ -1,0 +1,22 @@
+ query{ 
+     search(query:"timrwood", type:USER, first: 10) {
+         nodes {
+             ...on User {
+                 issues(last:100) {
+                    totalCount
+                    nodes {
+                        closed
+                        reactions(last:100) {
+                            nodes {
+                                content
+                            }
+                        }
+                        comments {
+                            totalCount
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

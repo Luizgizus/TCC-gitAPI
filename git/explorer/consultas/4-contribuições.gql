@@ -1,0 +1,19 @@
+query{ 
+  search(query: "alash3al", type: USER, first: 1) {
+    nodes {
+      ... on User {
+        contributionsCollection {
+          totalCommitContributions
+          totalIssueContributions
+          totalPullRequestContributions
+          totalPullRequestReviewContributions
+          totalRepositoriesWithContributedCommits
+          totalRepositoriesWithContributedIssues
+          totalRepositoriesWithContributedPullRequestReviews
+          totalRepositoryContributions
+          totalRepositoriesWithContributedPullRequests
+        }
+      }
+    }
+  }
+}
