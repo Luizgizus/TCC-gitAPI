@@ -6,7 +6,8 @@ const ApiStackOverflow = require("./src/apiStackOverflow")
 class Application {
 	constructor() {
 		this.apiStackOverflow = new ApiStackOverflow();
-		this.start()
+		// this.start()
+		this.getOne()
 	}
 
 	async start() {
@@ -32,6 +33,20 @@ class Application {
 			} catch (err) {
 				console.log(err)
 			}
+		}
+	}
+
+	async getOne() {
+		try {
+			console.log(`tring id ${4857883}`);
+			const isAllRigth = await this.apiStackOverflow.getFeatures(4857883);
+
+			if (!isAllRigth) {
+				i--
+			}
+			console.log(`cabo`);
+		} catch (err) {
+			console.log(err)
 		}
 	}
 }

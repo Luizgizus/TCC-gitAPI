@@ -18,6 +18,7 @@ class Repository {
             `AND r.idRepository not in (SELECT repositoryFK FROM github.sonarqualitymetrics) ` +
             `AND linesOfCode > 0 ` +
             `AND diskUsage > 0 ` +
+            `AND userFK in () ` +
 
             `ORDER BY RAND() ` +
             `LIMIT ${process.env.QTD_REPOS}`

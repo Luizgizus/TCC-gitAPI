@@ -37,8 +37,17 @@ class SonarCtrl {
         }
     }
 
+    checkHasMetric(metrics, name) {
+        const indexOfMentric = _.findIndex(metrics, function (o) { return o.metric === name; })
+        if (metrics && metrics[indexOfMentric]) {
+            return metrics[indexOfMentric].value
+        } else {
+            return null
+        }
+    }
+
     async saveMetrics(metrics, respository) {
-        const hasMetric = await this.sonarMetric.checkHasMetric(1, 1)
+        const hasMetric = await this.sonarMetric.checkHasMetric(respository.idUser, respository.idRepository)
 
         if (hasMetric.length === 0) {
             console.log("saveMetrics - worker - ")
